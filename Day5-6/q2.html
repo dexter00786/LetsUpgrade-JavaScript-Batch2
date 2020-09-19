@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question 2</title>
+	
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	
+	<style>
+		*{
+			margin: 5px;
+		}	
+		table
+		{
+			position:static;
+		}
+		th,td
+		{
+			border: 1px solid black;
+			padding:10px 20px;
+			text-align: center;
+			/* table-layout:auto; */
+		}
+		input
+		{
+			padding :5px;
+			border: 2px solid crimson;
+			border-radius: 5px;
+		}
+
+		button
+		{
+			height: 20px;
+			width: 60px;
+		}
+		.search
+		{
+			display: block;
+            
+		}
+        .left
+        {
+            float: left;
+        }
+
+	</style>
+
+</head>
+<body>
+    <div class="left">
+        <div class="search">
+            <input type="text" placeholder="Search Source">
+            <button onclick="searchSource()">Search</button>
+        </div>
+
+        <div class="search">
+            <input type="text" placeholder="Search Destination">
+            <button onclick="searchDestiny()">Search</button>
+        </div>
+        <br>
+        <fieldset style="float: left;">
+            <legend><b>Add Bus</b></legend>
+            <div>
+				<form style="margin-left: 30px;" onsubmit="add(event)">					
+                    Name : <input type="text"   placeholder="Name Of The Bus" required><br>
+                    Source: <input type="text"  placeholder="Start Journey" required><br>
+                    Destination: <input type="text"  placeholder="End Journey" required><br> 
+                    Bus Number : <input type="text"  placeholder="Number" required><br>
+                    Passenger Capacity: <input type="number"  placeholder="Capacity" required><br>
+                     <button type="submit" style="width: 100px;height: 30px;border: 3px solid green;">Add</button><br><br>
+                </form>
+            </div>
+        </fieldset>
+    </div>
+    <div style="float: right;margin-right: 8.5%;">
+		<table border="2" cellspacing="0">
+			<thead>
+				<tr class="head">
+					<th>Sr. No.</th>
+					<th>Name</th>
+                    <th>Source</th>
+                    <th>Destination</th>
+                    <th>Number</th>
+                    <th>Passenger Capacity</th>
+				</tr>
+			</thead>
+			<tbody class="body"></tbody>
+		</table>
+	</div>
+
+
+
+	<script type="text/javascript" src="q2 - Copy.js"></script>
+
+</body>
+</html>

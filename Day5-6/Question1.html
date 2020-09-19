@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+    <style>
+        body{
+            margin: 0%;
+            padding: 0%;
+        }
+        .data{
+            height: 500px;
+            margin-top: 70px;
+            margin-left: 10%;
+            background-color: lightgray;
+            width: 70%;
+            padding: 10px;
+        }
+        .table{
+            margin-top: 20px;
+            width: 100%;
+        }
+        th,
+        td{
+            height: 40px;
+            text-align: center;
+            padding: 5px;
+        }
+        input{
+            height: 30px;
+            text-indent: 30px;
+        }
+        button{
+            padding: 10px;
+        }
+        #searchname{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to employee management System</h1>
+<div class='data'>
+    <h1 style="margin-left: 40%;">Employee Details</h1>
+    <div class="form">
+    <form onsubmit="addEmployee(event)">
+        <input type="text" id="name" placeholder="Name" required />
+        <input type="number" id="age" placeholder="Age" required />
+        <input type="number" id="salary" placeholder="Salary" required />
+        <input type="text" id="city" placeholder="City" required />
+        <button type="submit">Add Employee</button>
+        
+    </form>
+    </div>
+    <div class="form"> 
+        <input type="text" placeholder="search employee"
+         onkeyup="searchbyname()" 
+         id="searchname" />
+    </div>
+    <table border="1" class="table" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Sr No.</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Salary</th>
+                <th>City</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody class="tdata"></tbody>
+    </table>
+</div>
+<script src="Question1.js"></script>
+</body>
+</html>
